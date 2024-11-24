@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter a number and click on enter</h1>
+    <input type="number" id="yes" min="200" max="500" required>
+    <button onclick="api()">Confirm</button>
+    <p id="re"></p>
+
+    <script>
+        function api(){
+            let ip=document.getElementById("yes")
+            if(!ip.checkValidity()){
+                document.getElementById("re").innerHTML=ip.validationMessage;
+
+            }
+            else{
+                document.getElementById("re").innerHTML="input is valid";
+            }
+        }
+    </script>
+</body>
+</html>
